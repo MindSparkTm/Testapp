@@ -1,0 +1,41 @@
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <title>Test App</title>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+
+        <h3 class="text-muted">Python Django App</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Demo Test App</h1>
+<form  method="POST">
+    {% csrf_token %}
+        <input type="number" name="smscode" id="smscode" class="form-control" placeholder="Enter the verification code sent to you over sms" required autofocus>
+
+        <input type="submit" value="Enter" ></input>
+      </form>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
