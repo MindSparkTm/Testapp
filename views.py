@@ -241,7 +241,7 @@ class loginsmsverification(CreateView):
 
 def sendemailcode(sender,recipient,content):
 
-    sg = sendgrid.SendGridAPIClient(apikey="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")
+    sg = sendgrid.SendGridAPIClient(apikey="")
     mail = Mail()
     from_email = Email(sender)
     to_email = Email(recipient)
@@ -267,8 +267,8 @@ def sendemailcode(sender,recipient,content):
 
 
 def sendsms(recipient,smscode):
-    account_sid = 'AC1392e634011a175f17c95fab06a86eb8'
-    auth_token = 'b87e50db710afe85ecd6b8f7ac7532e4'
+    account_sid = ''
+    auth_token = ''
     client = Client(account_sid, auth_token)
 
     message = client.messages \
